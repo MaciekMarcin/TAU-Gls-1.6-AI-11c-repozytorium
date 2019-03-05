@@ -2,3 +2,7 @@
 s15778 tau cwiczenia
 
 Świeczki
+
+someCandleApp - pierwsze testy
+
+labOneApp - Pierwsze laboratoria (Nr.2 ze strony)
