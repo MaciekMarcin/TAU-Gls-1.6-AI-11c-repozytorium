@@ -18,29 +18,72 @@ import java.util.Optional;
 @RunWith(BlockJUnit4ClassRunner.class)
 public class CandleDaoTest {
 
-
-    CandleDao candleDao;
+    CandleDao dao;
 
     @Before
     public void setup() {
-        candleDao = new CandleDao();
-        /*Candle c1 = new Candle();
+        Candle c1 = new Candle();
         Candle c2 = new Candle();
         c1.setId(1L);
-        c1.setName("Pomaranczowe mango");
-        c1.setCompany("Drutex");
-        c1.setBurningTime(15L);
+        c1.setName("Lawendowe wzgorza");
+        c1.setCompany("Bris");
+        c1.setBurningTime(30L);
         c2.setId(2L);
-        c2.setName("Chyba owoce lesne");
-        c2.setCompany("Bazar");
-        c2.setBurningTime(45L);
+        c2.setName("Pomaraczowa sciana");
+        c2.setCompany("Pronto");
+        c2.setBurningTime(20L);
+        dao = new CandleDao();
         dao.candles = new HashMap<Long, Candle>();
         dao.candles.put(1L,c1);
-        dao.candles.put(2L,c2);*/
+        dao.candles.put(2L,c2);
     }
 
     @Test
-    public void createDaoObjectTest() {
-        assertNotNull(candleDao);
+    public void candleDaoExistsTest() {
+        assertNotNull(dao);
     }
+
+    @Test
+    public void getCandleThatExistsTest(){
+        Optional<Candle> c = dao.get(1L);
+        assertThat(c.get().getName(), is("Lawendowe wzgorza"));
+    }
+
+    @Test
+    public void saveNewCandleTest(){
+        Candle c3 = new Candle();
+        c3.setId(3L);
+        c3.setName("Mietowa lazienka");
+        c3.setCompany("Drutex");
+        c3.setBurningTime(40L);
+        dao.save(c3);
+        Optional<Candle> c = dao.get(c3.getId());
+        assertThat(c.get().getName(), is("Mietowa lazienka"));
+    }
+
+    @Test
+    public void updateExistingCandle() {
+        Candle updatedCandle = new Candle();
+        updatedCandle.setId(1L);
+        updatedCandle.setName("Lody waniliowe");
+        updatedCandle.setCompany("Panasonix");
+        updatedCandle.setBurningTime(10L);
+        dao.update(updatedCandle);
+        Optional<Candle> c = dao.get(1L);
+        assertThat(c.get().getName(), is("Lody waniliowe"));
+    }
+
+    @Test
+    public void deleteExistingCandle() {
+        Candle deletedCandle = new Candle();
+        deletedCandle.setId(1L);
+        deletedCandle.setName("Lody waniliowe");
+        deletedCandle.setCompany("Panasonix");
+        deletedCandle.setBurningTime(10L);
+        dao.delete(deletedCandle);
+        Optional<Candle> c = dao.get(deletedCandle.getId());
+        assertThat(c, is(Optional.empty()));
+        //assertNull(c);
+    }
+
 }

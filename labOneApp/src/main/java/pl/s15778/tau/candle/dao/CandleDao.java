@@ -20,17 +20,27 @@ public class CandleDao implements Dao<Candle> {
     }
 
     @Override
-    public void save(Candle o) {
-
+    public void save(Candle o) throws IllegalArgumentException {
+        if(candles.containsKey(o.getId()))
+            throw new IllegalArgumentException("Key does exist");
+    
+        candles.put(o.getId(),o);
     }
 
     @Override
-    public void update(Candle o){
+    public void update(Candle o) throws IllegalArgumentException {
+        if(!candles.containsKey(o.getId()))
+            throw new IllegalArgumentException("Key does not exist");
+
+        candles.put(1L,o);
     }
 
     @Override
-    public void delete(Candle o) {
-}
-
+    public void delete(Candle o) throws IllegalArgumentException {
+        if (!candles.containsKey(o.getId()))
+            throw new IllegalArgumentException("Key does not exist");
+            
+        candles.remove(o.getId());
+    }
 
 }
