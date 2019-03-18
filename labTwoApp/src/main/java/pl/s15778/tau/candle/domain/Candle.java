@@ -6,11 +6,10 @@ public class Candle {
     private String name;
     private String company;
     private Integer cbt;
-
     public Candle() {
     }
 
-    public Candle() {
+    public Candle(String name, String company, Integer cbt) {
         this.id = null;
         this.name = name;
         this.company = company;
@@ -21,7 +20,7 @@ public class Candle {
         return id;
     }
 
-    public void setId() {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -37,7 +36,7 @@ public class Candle {
         return company;
     }
 
-    public String setCompany(String company){
+    public void setCompany(String company){
         this.company = company;
     }
 

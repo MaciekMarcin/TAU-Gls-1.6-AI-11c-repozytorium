@@ -1,0 +1,84 @@
+-------------------------------------------------------------------------------
+Test set: pl.s15778.tau.candle.DatabaseTestSuite
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 10, Skipped: 0, Time elapsed: 10.295 s <<< FAILURE! - in pl.s15778.tau.candle.DatabaseTestSuite
+checkAdding(pl.s15778.tau.candle.dao.CandleDaoTest)  Time elapsed: 2.135 s  <<< ERROR!
+java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+
+checkAdding(pl.s15778.tau.candle.dao.CandleDaoTest)  Time elapsed: 2.135 s  <<< ERROR!
+java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+
+checkDeleting(pl.s15778.tau.candle.dao.CandleDaoTest)  Time elapsed: 2.032 s  <<< ERROR!
+java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+
+checkDeleting(pl.s15778.tau.candle.dao.CandleDaoTest)  Time elapsed: 2.032 s  <<< ERROR!
+java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+
+checkGetting(pl.s15778.tau.candle.dao.CandleDaoTest)  Time elapsed: 2.032 s  <<< ERROR!
+java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+
+checkGetting(pl.s15778.tau.candle.dao.CandleDaoTest)  Time elapsed: 2.033 s  <<< ERROR!
+java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+
+checkUpdatingSuccess(pl.s15778.tau.candle.dao.CandleDaoTest)  Time elapsed: 2.005 s  <<< ERROR!
+java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+
+checkUpdatingSuccess(pl.s15778.tau.candle.dao.CandleDaoTest)  Time elapsed: 2.006 s  <<< ERROR!
+java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+
+checkUpdatingFailure(pl.s15778.tau.candle.dao.CandleDaoTest)  Time elapsed: 2.007 s  <<< ERROR!
+java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+
+checkUpdatingFailure(pl.s15778.tau.candle.dao.CandleDaoTest)  Time elapsed: 2.008 s  <<< ERROR!
+java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+

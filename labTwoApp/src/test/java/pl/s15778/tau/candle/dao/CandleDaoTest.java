@@ -6,7 +6,7 @@ import org.junit.*;
 import org.junit.rules.Timeout;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-import pl.s15778.tau.candle.domain.candle;
+import pl.s15778.tau.candle.domain.Candle;
 import java.sql.*;
 import static org.hamcrest.CoreMatchers.*;
 
@@ -21,8 +21,8 @@ import java.util.logging.Logger;
 public class CandleDaoTest {
     private static final Logger LOGGER = Logger.getLogger(CandleDaoTest.class.getCanonicalName());
 
-    @rule
-    public Timeout globalTimeout = new Timeout(1000);
+    @Rule
+    public Timeout globalTimeout = new Timeout(10000);
 
     public static String url = "jdbc:hsqldb:hsql://localhost/workdb";
 
@@ -44,7 +44,7 @@ public class CandleDaoTest {
         
         expectedDbState = new LinkedList<Candle>();
         for (int i = 0; i < 10; i++) {
-            Candle candle = new Candle("MATATA" + rand.nextInt(1000), 1000 + rand.nextInt(1000));
+            Candle candle = new Candle("MATATA" + rand.nextInt(1000), "AJAX" + rand.nextInt(1000), 1000 + rand.nextInt(1000));
             try{
                 addCandleStmt.setString(1, candle.getName());
                 addCandleStmt.setString(2, candle.getCompany());
@@ -63,7 +63,6 @@ public class CandleDaoTest {
         candleManager = new CandleDaoJdbcImpl(connection);
 
     }
-}
 
 @After
 public void cleanup() throws SQLException {
@@ -80,7 +79,7 @@ public void checkAdding() throws Exception {
     Candle candle = new Candle();
     candle.setName("Lawendowe wzgorza");
     candle.setCompany("DRUTEX");
-    candle.setCbt(30L);
+    candle.setCbt(30);
 
     assertEquals(1, candleManager.addCandle(candle));
 
@@ -114,8 +113,9 @@ public void checkUpdatingSuccess() throws SQLException {
 
 @Test(expected = SQLException.class)
 public void checkUpdatingFailure() throws SQLException {
-    Candle c = new Candle("Mango", 123);
+    Candle c = new Candle("Mango","Pronto", 123);
     assertEquals(1, candleManager.updateCandle(c));
+}
 }
 
 

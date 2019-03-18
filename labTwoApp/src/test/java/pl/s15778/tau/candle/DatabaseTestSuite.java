@@ -1,11 +1,11 @@
-package pl.s15778.tau.candle.domain;
+package pl.s15778.tau.candle;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-import pl.tau.dbdemo.dao.PersonDaoTest;
+import pl.s15778.tau.candle.dao.CandleDaoTest;
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses(PersonDaoTest.class)
+@Suite.SuiteClasses(CandleDaoTest.class)
 public class DatabaseTestSuite
 {
 
