@@ -1,3 +1,4 @@
 language: java
 script:
-- cd labOneApp; mvn test
+- sh scripts/server.sh
+- cd labTwoApp; mvn test
