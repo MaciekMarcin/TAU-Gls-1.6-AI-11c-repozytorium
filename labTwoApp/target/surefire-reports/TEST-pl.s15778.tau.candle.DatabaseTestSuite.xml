@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="pl.s15778.tau.candle.DatabaseTestSuite" time="10.295" tests="10" errors="10" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="pl.s15778.tau.candle.DatabaseTestSuite" time="12.322" tests="12" errors="12" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\Marcin\AppData\Local\Temp\surefire17318771517546097426\surefirebooter15404645024162248121.jar C:\Users\Marcin\AppData\Local\Temp\surefire17318771517546097426 2019-03-18T23-44-34_927-jvmRun1 surefire7770620008230386322tmp surefire_013458874613693176445tmp"/>
+    <property name="sun.java.command" value="C:\Users\Marcin\AppData\Local\Temp\surefire5793040050827842709\surefirebooter14089073810556421722.jar C:\Users\Marcin\AppData\Local\Temp\surefire5793040050827842709 2019-03-19T00-18-32_875-jvmRun1 surefire8817635871846469828tmp surefire_06726721979872804227tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Marcin\Desktop\TAU-Gls-1.6-AI-11c-repozytorium-master\labTwoApp\target\test-classes;C:\Users\Marcin\Desktop\TAU-Gls-1.6-AI-11c-repozytorium-master\labTwoApp\target\classes;C:\Users\Marcin\.m2\repository\junit\junit\4.9\junit-4.9.jar;C:\Users\Marcin\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar;C:\Users\Marcin\.m2\repository\org\hsqldb\hsqldb\2.3.4\hsqldb-2.3.4.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Marcin\AppData\Local\Temp\surefire17318771517546097426\surefirebooter15404645024162248121.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Marcin\AppData\Local\Temp\surefire5793040050827842709\surefirebooter14089073810556421722.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.2+9-LTS"/>
@@ -60,7 +60,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="checkAdding" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.135">
+  <testcase name="checkAdding" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.136">
     <error message="java.net.ConnectException: Connection refused: connect" type="java.sql.SQLTransientConnectionException">java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
 	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
 Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
@@ -69,7 +69,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
 </error>
   </testcase>
-  <testcase name="checkAdding" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.135">
+  <testcase name="checkAdding" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.136">
     <error message="java.net.ConnectException: Connection refused: connect" type="java.sql.SQLTransientConnectionException">java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
 	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
 Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
@@ -78,7 +78,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
 </error>
   </testcase>
-  <testcase name="checkDeleting" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.032">
+  <testcase name="checkDeleting" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.03">
     <error message="java.net.ConnectException: Connection refused: connect" type="java.sql.SQLTransientConnectionException">java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
 	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
 Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
@@ -87,7 +87,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
 </error>
   </testcase>
-  <testcase name="checkDeleting" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.032">
+  <testcase name="checkDeleting" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.03">
     <error message="java.net.ConnectException: Connection refused: connect" type="java.sql.SQLTransientConnectionException">java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
 	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
 Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
@@ -105,7 +105,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
 </error>
   </testcase>
-  <testcase name="checkGetting" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.033">
+  <testcase name="checkGetting" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.032">
     <error message="java.net.ConnectException: Connection refused: connect" type="java.sql.SQLTransientConnectionException">java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
 	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
 Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
@@ -114,7 +114,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
 </error>
   </testcase>
-  <testcase name="checkUpdatingSuccess" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.005">
+  <testcase name="checkDeletingFail" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.031">
     <error message="java.net.ConnectException: Connection refused: connect" type="java.sql.SQLTransientConnectionException">java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
 	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
 Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
@@ -123,7 +123,25 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
 </error>
   </testcase>
-  <testcase name="checkUpdatingSuccess" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.006">
+  <testcase name="checkDeletingFail" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.031">
+    <error message="java.net.ConnectException: Connection refused: connect" type="java.sql.SQLTransientConnectionException">java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
+</error>
+  </testcase>
+  <testcase name="checkUpdatingSuccess" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.02">
+    <error message="java.net.ConnectException: Connection refused: connect" type="java.sql.SQLTransientConnectionException">java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at pl.s15778.tau.candle.dao.CandleDaoTest.setup(CandleDaoTest.java:34)
+</error>
+  </testcase>
+  <testcase name="checkUpdatingSuccess" classname="pl.s15778.tau.candle.dao.CandleDaoTest" time="2.021">
     <error message="java.net.ConnectException: Connection refused: connect" type="java.sql.SQLTransientConnectionException">java.sql.SQLTransientConnectionException: java.net.ConnectException: Connection refused: connect
 	at pl.s15778.tau.candle.dao.CandleDaoTest.cleanup(CandleDaoTest.java:69)
 Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Connection refused: connect

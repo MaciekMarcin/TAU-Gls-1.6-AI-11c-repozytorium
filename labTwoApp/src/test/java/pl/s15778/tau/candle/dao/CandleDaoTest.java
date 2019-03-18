@@ -88,18 +88,31 @@ public void checkAdding() throws Exception {
 }
 
 @Test
+public void checkGettingAll() {
+    assertThat(candleManager.getAllCandles().equalTo(expectedDbState));
+}
+
+@Test
 public void checkGetting() throws Exception {
     Candle candle = expectedDbState.get(7);
     assertEquals(candle, candleManager.getCandle(candle.getId()));
 }
 
 @Test(expected = SQLException.class)
-public void checkDeleting() throws SQLException {
+public void checkDeletingFailure() throws SQLException {
     Candle c = expectedDbState.get(3);
     expectedDbState.remove(c);
     assertEquals(1, candleManager.deleteCandle(c));
     assertThat(candleManager.getAllCandles(), equalTo(expectedDbState));
     assertNull(candleManager.getCandle(c.getId()));
+}
+
+@Test
+public void checkDeletingSuccess() {
+    Candle c = expectedDbState.get(1);
+    expectedDbState.remove(c);
+    assertEquals(1, candleManager.deleteCandle(c));
+    assertThat(candleManager.getAllCandles(), equalTo(expectedDbState));
 }
 
 @Test
