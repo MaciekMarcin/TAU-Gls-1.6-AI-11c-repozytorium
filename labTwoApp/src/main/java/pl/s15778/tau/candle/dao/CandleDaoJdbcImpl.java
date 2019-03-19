@@ -99,13 +99,17 @@ public class CandleDaoJdbcImpl implements CandleDao {
         }
 
     @Override
-    public int deleteCandle(Candle candle) {
+    public int deleteCandle(Candle candle) throws SQLException {
+        int count = 0;
         try {
             deleteCandleStmt.setLong(1, candle.getId());
-            return deleteCandleStmt.executeUpdate();
+            count = deleteCandleStmt.executeUpdate();
         } catch (SQLException e) {
             throw new IllegalStateException(e.getMessage() + "\n" + e.getStackTrace().toString());
         }
+        if (count <= 0)
+            throw new SQLException("Candle not found to delete");
+        return count;
     }
 
     @Override
