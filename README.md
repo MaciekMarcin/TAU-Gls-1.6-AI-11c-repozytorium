@@ -7,3 +7,4 @@ someCandleApp - pierwsze testy
 
 labOneApp - Pierwsze laboratoria (Nr.2 ze strony)
 labTwoApp - Drugie laboratoria (Nr.3 ze strony)
+labThreeApp - Trzecie laboratoria (Nr.4 ze strony)
