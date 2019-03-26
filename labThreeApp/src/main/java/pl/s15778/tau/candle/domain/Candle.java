@@ -2,10 +2,10 @@ package pl.s15778.tau.candle.domain;
 
 
 public class Candle {
-    private Long id;
-    private String name;
-    private String company;
-    private Integer cbt;
+    public Long id;
+    public String name;
+    public String company;
+    public Integer cbt;
     public Candle() {
     }
 
@@ -40,12 +40,12 @@ public class Candle {
         this.company = company;
     }
 
-    public Integer getCbt() {
-        return cbt;
+    public void setCbt(Integer cbt) {
+        this.cbt = cbt;
     }
 
-    public void setCbt(int cbt) {
-        this.cbt = cbt;
+    public Integer getCbt() {
+        return cbt;
     }
 
     @Override

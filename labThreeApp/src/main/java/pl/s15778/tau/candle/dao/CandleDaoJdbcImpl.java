@@ -9,13 +9,27 @@ import java.util.List;
 
 public class CandleDaoJdbcImpl implements CandleDao {
 
-    private Connection connection;
+    public Connection connection;
     
-    private PreparedStatement addCandleStmt;
-    private PreparedStatement getAllCandlesStmt;
-    private PreparedStatement deleteCandleStmt;
-    private PreparedStatement getCandleStmt;
-    private PreparedStatement updateCandleStmt;
+    public PreparedStatement addCandleStmt;
+    public PreparedStatement getAllCandlesStmt;
+    public PreparedStatement deleteCandleStmt;
+    public PreparedStatement getCandleStmt;
+    public PreparedStatement updateCandleStmt;
+
+        @Override
+        public Connection getConnection() {
+            return connection;
+        }
+
+        public void setConnection(Connection connection) throws SQLException {
+            this.connection = connection;
+                addCandleStmt = connection.prepareStatement("INSERT INTO Candle (name, company, cbt) VALUES (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+                deleteCandleStmt = connection.prepareStatement("DELETE FROM Candle where id = ?");
+                getAllCandlesStmt = connection.prepareStatement("SELECT id, name, company, cbt FROM Candle ORDER BY id");
+                getCandleStmt = connection.prepareStatement("SELECT id, name, company, cbt FROM Candle WHERE id = ?");
+                updateCandleStmt = connection.prepareStatement("UPDATE Candle SET name=?,company=?,cbt=? WHERE id = ?");
+        }
 
     public CandleDaoJdbcImpl(Connection connection) throws SQLException {
         this.connection = connection;
@@ -48,20 +62,12 @@ public class CandleDaoJdbcImpl implements CandleDao {
     }
 
     @Override
-    public int addCandle(Candle candle) {
-        int count = 0;
-        try {
+    public int addCandle(Candle candle) throws SQLException {
             addCandleStmt.setString(1, candle.getName());
             addCandleStmt.setString(2, candle.getCompany());
             addCandleStmt.setInt(3, candle.getCbt());
-            count = addCandleStmt.executeUpdate();
-            ResultSet generatedKeys = addCandleStmt.getGeneratedKeys();
-            if (generatedKeys.next()) {
-                candle.setId(generatedKeys.getLong(1));
-                }
-            } catch (SQLException e) {
-                throw new IllegalStateException(e.getMessage() + "\n" + e.getStackTrace().toString());
-            }
+            int count = addCandleStmt.executeUpdate();
+            
             return count;
         }
 
@@ -72,7 +78,7 @@ public class CandleDaoJdbcImpl implements CandleDao {
 
                 while (rs.next()) {
                     Candle c = new Candle();
-                    c.setId(rs.getInt("id"));
+                    c.setId(rs.getLong("id"));
                     c.setName(rs.getString("name"));
                     c.setCompany(rs.getString("company"));
                     c.setCbt(rs.getInt("cbt"));
@@ -84,52 +90,31 @@ public class CandleDaoJdbcImpl implements CandleDao {
             return candles;
         }
 
-        @Override
-        public Connection getConnection() {
-            return connection;
-        }
-
-        public void setConnection(Connection connection) throws SQLException {
-            this.connection = connection;
-                addCandleStmt = connection.prepareStatement("INSERT INTO Candle (name, company, cbt) VALUES (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
-                deleteCandleStmt = connection.prepareStatement("DELETE FROM Candle where id = ?");
-                getAllCandlesStmt = connection.prepareStatement("SELECT id, name, company, cbt FROM Candle ORDER BY id");
-                getCandleStmt = connection.prepareStatement("SELECT id, name, company, cbt FROM Candle WHERE id = ?");
-                updateCandleStmt = connection.prepareStatement("UPDATE Candle SET name=?,company=?,cbt=? WHERE id = ?");
-        }
-
     @Override
     public int deleteCandle(Candle candle) throws SQLException {
-        int count = 0;
-        try {
             deleteCandleStmt.setLong(1, candle.getId());
-            count = deleteCandleStmt.executeUpdate();
-        } catch (SQLException e) {
-            throw new IllegalStateException(e.getMessage() + "\n" + e.getStackTrace().toString());
-        }
-        if (count <= 0)
-            throw new SQLException("Candle not found to delete");
-        return count;
+            int count = deleteCandleStmt.executeUpdate();
+
+            if(count == 0)
+                throw new SQLException("Candle not found for delete");
+
+
+            return count;
     }
 
     @Override
     public int updateCandle(Candle candle) throws SQLException {
-        int count = 0;
-        try {
+
             updateCandleStmt.setString(1, candle.getName());
             updateCandleStmt.setString(2, candle.getCompany());
             updateCandleStmt.setInt(3, candle.getCbt());
-            if (candle.getId() != null) {
-                updateCandleStmt.setLong(4, candle.getId());
-            } else {
-                updateCandleStmt.setLong(4, -1);
-            }
-            count = updateCandleStmt.executeUpdate();
-        } catch (SQLException e) {
-            throw new IllegalStateException(e.getMessage() + "\n" + e.getStackTrace().toString());
-        }
-        if (count <= 0)
+            updateCandleStmt.setLong(4, candle.getId());
+            int count = updateCandleStmt.executeUpdate();
+
+        if (count == 0)
             throw new SQLException("Candle not found for update");
+
+
         return count;
     }
 
