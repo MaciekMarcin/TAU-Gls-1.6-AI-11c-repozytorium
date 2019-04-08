@@ -1,0 +1,30 @@
+
+(stories/CandleLight.story)
+Scenario: Customer lights a candle
+Examples:
+Given Customer has a candle
+When Customer chose name <name>
+Then Candle has been lit
+
+|name|
+|Mango|
+|Lawenda|
+|Miêta|
+
+Example: {name=Mango}
+Given Customer has a candle
+When Customer chose name Mango
+Then Candle has been lit
+
+Example: {name=Lawenda}
+Given Customer has a candle
+When Customer chose name Lawenda
+Then Candle has been lit
+
+Example: {name=Miêta}
+Given Customer has a candle
+When Customer chose name Miêta
+Then Candle has been lit
+
+
+

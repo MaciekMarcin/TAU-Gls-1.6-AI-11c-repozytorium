@@ -3,7 +3,7 @@ Feature: Candle light
 
     Scenario Outline: Customer lights a candle
         Given Customer has a candle
-        When Customer chose name "Mango"
+        When Customer chose name "<name>"
         Then Candle has been lit
 
         Examples:

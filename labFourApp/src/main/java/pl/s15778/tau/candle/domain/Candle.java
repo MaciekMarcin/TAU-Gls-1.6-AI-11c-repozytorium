@@ -58,10 +58,22 @@ public class Candle {
 
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Candle candle = (Candle) o;
+        return cbt == candle.cbt &&
+                Objects.equals(id, candle.id) &&
+                Objects.equals(name, candle.name) &&
+                Objects.equals(company, candle.company);
+    }
+
+    /* za to u góry
+    @Override
+    public boolean equals(Object o) {
         Candle other = (Candle) o;
         boolean ret = other.getName().equals(this.getName()) && other.getCompany().equals(this.getCompany()) && ((other.getId() == this.getId()) || (other.getId().longValue() == this.getId().longValue())) && ((other.getCbt() == this.getCbt()) || (other.getCbt().intValue() == this.getCbt().intValue()));
     return ret;
-    }
+    }*/
 
     @Override
     public int hashCode() {

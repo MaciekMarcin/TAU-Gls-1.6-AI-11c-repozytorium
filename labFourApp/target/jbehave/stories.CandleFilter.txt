@@ -1,0 +1,40 @@
+
+(stories/CandleFilter.story)
+Scenario: Customer is looking for a candle by filtering
+Given Customer is on page with candles search engine (PENDING)
+When Customer sets the name filtering to Mango (PENDING)
+And Customer sets the company filtering to Ikea (PENDING)
+And Customer sets cbt filtering to 30 (PENDING)
+Then Customer finds candles that meet the criteria given by him (PENDING)
+@Given("Customer is on page with candles search engine")
+@Pending
+public void givenCustomerIsOnPageWithCandlesSearchEngine() {
+  // PENDING
+}
+
+@When("Customer sets the name filtering to Mango")
+@Pending
+public void whenCustomerSetsTheNameFilteringToMango() {
+  // PENDING
+}
+
+@When("Customer sets the company filtering to Ikea")
+@Pending
+public void whenCustomerSetsTheCompanyFilteringToIkea() {
+  // PENDING
+}
+
+@When("Customer sets cbt filtering to 30")
+@Pending
+public void whenCustomerSetsCbtFilteringTo30() {
+  // PENDING
+}
+
+@Then("Customer finds candles that meet the criteria given by him")
+@Pending
+public void thenCustomerFindsCandlesThatMeetTheCriteriaGivenByHim() {
+  // PENDING
+}
+
+
+

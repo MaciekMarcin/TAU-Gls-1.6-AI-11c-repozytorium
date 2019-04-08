@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>stories.CandleBuying</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: txt"><![CDATA[
+
+(stories/CandleBuying.story)
+Scenario: Customer buys a candle
+Examples:
+Given Customer chooses a candle
+When Customer chose company <company>
+And Customer chose cbt <cbt>
+Then Candle has been sold
+
+|company|cbt|
+|Bris|30|
+|Pronto|45|
+|Domestos|15|
+
+Example: {company=Bris, cbt=30}
+Given Customer chooses a candle
+When Customer chose company Bris
+And Customer chose cbt 30
+Then Candle has been sold
+
+Example: {company=Pronto, cbt=45}
+Given Customer chooses a candle
+When Customer chose company Pronto
+And Customer chose cbt 45
+Then Candle has been sold
+
+Example: {company=Domestos, cbt=15}
+Given Customer chooses a candle
+When Customer chose company Domestos
+And Customer chose cbt 15
+Then Candle has been sold
+
+
+
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

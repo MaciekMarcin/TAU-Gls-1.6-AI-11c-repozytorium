@@ -1,0 +1,8 @@
+#org.jbehave.core.embedder.StoryManager
+#Mon Apr 08 23:19:38 CEST 2019
+stories/CandleBuying.story=0
+stories/CandleLight.story=0
+stories/CandleFilter.story=0
+total=0
+threadAverage=0
+threads=1

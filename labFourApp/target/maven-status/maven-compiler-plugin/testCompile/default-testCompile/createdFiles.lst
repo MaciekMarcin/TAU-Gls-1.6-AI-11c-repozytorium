@@ -1,3 +1,8 @@
+pl\s15778\tau\candle\jbehave\CandleBuying.class
 pl\s15778\tau\candle\cucumber\CandleBuying.class
 pl\s15778\tau\candle\cucumber\RunCucumberTest.class
+pl\s15778\tau\candle\cucumber\CandleFilter.class
+pl\s15778\tau\candle\jbehave\CandleFilter.class
 pl\s15778\tau\candle\cucumber\CandleLight.class
+pl\s15778\tau\candle\jbehave\CandleLight.class
+pl\s15778\tau\candle\jbehave\RunJBehaveTest.class

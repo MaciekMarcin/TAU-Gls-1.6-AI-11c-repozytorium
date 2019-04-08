@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: pl.s15778.tau.candle.cucumber.RunCucumberTest
+Test set: pl.s15778.tau.candle.jbehave.RunJBehaveTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.367 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.991 sec

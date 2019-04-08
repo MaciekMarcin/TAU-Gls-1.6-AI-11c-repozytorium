@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="pl.s15778.tau.candle.cucumber.RunCucumberTest" time="0.02" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="pl.s15778.tau.candle.jbehave.RunJBehaveTest" time="0.991" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.2+9-LTS"/>
@@ -65,11 +65,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Candle buying" name="Customer buys a candle" time="0.003"/>
-  <testcase classname="Candle buying" name="Customer buys a candle" time="0"/>
-  <testcase classname="Candle buying" name="Customer buys a candle" time="0"/>
-  <testcase classname="Candle finding by filtering" name="Customer is looking for a candle by filtering" time="0.017"/>
-  <testcase classname="Candle light" name="Customer lights a candle" time="0"/>
-  <testcase classname="Candle light" name="Customer lights a candle" time="0"/>
-  <testcase classname="Candle light" name="Customer lights a candle" time="0"/>
+  <testcase classname="pl.s15778.tau.candle.jbehave.RunJBehaveTest" name="run" time="0.991"/>
 </testsuite>
